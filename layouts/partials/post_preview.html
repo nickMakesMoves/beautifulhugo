@@ -6,6 +6,12 @@
             {{ .Params.subtitle }}
         </h3>
         {{ end }}
+        <p class="post-meta">
+            {{ partial "post_meta.html" . }}
+        </p>
+    </a>
+    <div class="preview-side-by-side">
+      <a href="{{ .Permalink }}">
         {{ if .Params.image }}
         <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-title" />
         {{ end }}
@@ -13,12 +19,11 @@
         <video loop autoplay muted playsinline class="img-title">
             <source src="{{ .Params.video }}">
         </video>
-        {{ end }}
-    </a>
+        {{end}}
+      </a>
+    </div>
 
-    <p class="post-meta">
-        {{ partial "post_meta.html" . }}
-    </p>
+
     <div class="post-entry">
         {{ if or (.Truncated) (.Params.summary) }}
         {{ .Summary }}
@@ -28,6 +33,8 @@
         {{ end }}
     </div>
 
+
+
     {{ if .Params.tags }}
     <div class="blog-tags">
         {{ range .Params.tags }}
@@ -36,7 +43,7 @@
        <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
        -->
        <a href="{{"tags" | absLangURL}}/{{ . | urlize }}/">{{ . }}</a>&nbsp;
-        {{ end }} 
+        {{ end }}
     </div>
     {{ end }}
 

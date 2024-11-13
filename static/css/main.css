@@ -140,7 +140,9 @@ figure:not(.dark) img, img.white {
 }
 
 .img-title {
-  width: 100%;
+  width: 30%;
+  margin: 2%;
+  float: left;
 }
 
 .disqus-comments {
@@ -417,6 +419,10 @@ footer div.disclaimer {
 }
 
 /* --- Post preview --- */
+
+.preview-side-by-side {
+
+}
 
 .post-preview {
   padding: 20px 0;
@@ -869,7 +875,7 @@ div.splitbox div.right {
     padding: 15px 25px;
   }
 }
-.disqus-comments button:hover, 
+.disqus-comments button:hover,
 .disqus-comments button:focus {
   color: #FFF;
   background: #0085a1;
@@ -970,7 +976,7 @@ h4.see-also {
     padding: 10px;
     position: relative;
   }
-  
+
   .copyCodeButton {
     background-color: #f5f5f5;
     border: 1px solid #ccc;
@@ -985,12 +991,11 @@ h4.see-also {
     transition: background-color 0.3s ease;
     z-index: 10;
   }
-  
+
   .highlight:hover .copyCodeButton {
     display: block;
   }
-  
+
   .copyCodeButton:hover {
     background-color: #e0e0e0;
   }
-  
